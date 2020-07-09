@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		1E5F63C021ED192CD3CB71B4 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C6F633AC810DA8AA42A /* MainViewTests.swift */; };
 		1E5F63DD6BF2E48A432B8892 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B09422ABC521F0A9F5A /* UIImageExtensions.swift */; };
+		1E5F64ADFE3965933E4C1332 /* FakeUIViewAnimationsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F35AB4236F4B8F9A02D /* FakeUIViewAnimationsWrapper.swift */; };
 		1E5F65B8971CFC8A09C29D89 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F61502AFDDCBA2986D185 /* UIButtonExtensions.swift */; };
 		1E5F665851BDE3D1F0A58FD4 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F689FF2E69E67F9BC2166 /* UIColorExtensions.swift */; };
+		1E5F66987924506AB1F8BA77 /* UIAnimationsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6FEF3C802E48D219B94C /* UIAnimationsWrapper.swift */; };
 		1E5F66FCAE05B98FA318AFFE /* UIControlTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62742CEEB56893F03F6F /* UIControlTestsExtensions.swift */; };
 		1E5F67BF9D3323B3487C21AA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F602CDD1AF59B505C2747 /* UIViewExtensions.swift */; };
 		1E5F6AEB02ED02C92314764C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6697BAB521F57F09C881 /* MainViewController.swift */; };
@@ -42,6 +44,8 @@
 		1E5F689FF2E69E67F9BC2166 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1E5F6B09422ABC521F0A9F5A /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		1E5F6C6F633AC810DA8AA42A /* MainViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
+		1E5F6F35AB4236F4B8F9A02D /* FakeUIViewAnimationsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIViewAnimationsWrapper.swift; sourceTree = "<group>"; };
+		1E5F6FEF3C802E48D219B94C /* UIAnimationsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnimationsWrapper.swift; sourceTree = "<group>"; };
 		2291E77624B44E2900E7F820 /* CleanCodeAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCodeAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2291E77924B44E2900E7F820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2291E78224B44E2D00E7F820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1E5F6798C7FDC8F5D98CC9B8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6FEF3C802E48D219B94C /* UIAnimationsWrapper.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		1E5F6D3A8944810C02B7F42C /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5F62742CEEB56893F03F6F /* UIControlTestsExtensions.swift */,
+				1E5F6F35AB4236F4B8F9A02D /* FakeUIViewAnimationsWrapper.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -142,6 +155,7 @@
 				1E5F63FC4FAE21F243EAC81B /* Extensions */,
 				2291E79B24B4BA4300E7F820 /* main.swift */,
 				1E5F63A3565545DF08797777 /* Main Screen */,
+				1E5F6798C7FDC8F5D98CC9B8 /* UI */,
 			);
 			path = CleanCodeAnimations;
 			sourceTree = "<group>";
@@ -274,6 +288,7 @@
 				1E5F63DD6BF2E48A432B8892 /* UIImageExtensions.swift in Sources */,
 				1E5F6DBDA4D72056D7FD4AE7 /* UILabelExtensions.swift in Sources */,
 				1E5F665851BDE3D1F0A58FD4 /* UIColorExtensions.swift in Sources */,
+				1E5F66987924506AB1F8BA77 /* UIAnimationsWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +298,7 @@
 			files = (
 				1E5F66FCAE05B98FA318AFFE /* UIControlTestsExtensions.swift in Sources */,
 				1E5F63C021ED192CD3CB71B4 /* MainViewTests.swift in Sources */,
+				1E5F64ADFE3965933E4C1332 /* FakeUIViewAnimationsWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,15 +5,20 @@ final class MainView: UIView {
     let button = UIButton.makeButton(with: "Change BG color")
     let label = UILabel.makeLabel(title: "Clean Code - Animations")
     let backgroundColors: [UIColor]
+    let animationsWrapper: UIViewAnimationsWrapper.Type
 
     private let animationDuration = 0.3
     private var backgroundColorIndex: Int = 0
 
-    init?(backgroundColors: [UIColor]) {
+    init?(
+        backgroundColors: [UIColor],
+        animationsWrapper: UIViewAnimationsWrapper.Type = UIView.self
+    ) {
         guard backgroundColors.count >= 2 else {
             return nil
         }
         self.backgroundColors = backgroundColors
+        self.animationsWrapper = animationsWrapper
         super.init(frame: .zero)
         backgroundColor = backgroundColors[backgroundColorIndex]
         layoutable()
@@ -35,7 +40,7 @@ private extension MainView {
 
     func changeBackgroundColor(animated: Bool) {
         if animated {
-            UIView.animate(withDuration: animationDuration, animations: { [weak self] in
+            animationsWrapper.animate(withDuration: animationDuration, animations: { [weak self] in
                 self?.applyBackgroundColorChange()
             }, completion: { [weak self] completed in 
                 self?.button.isUserInteractionEnabled = true
