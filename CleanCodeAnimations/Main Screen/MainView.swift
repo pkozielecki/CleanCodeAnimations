@@ -19,9 +19,8 @@ final class MainView: UIView {
         }
         self.backgroundColors = backgroundColors
         self.animationsWrapper = animationsWrapper
-        super.init(frame: .zero)
+        super.init(frame: UIScreen.main.bounds)
         backgroundColor = backgroundColors[backgroundColorIndex]
-        layoutable()
         setupSubviews()
         setupConstraints()
     }

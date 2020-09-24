@@ -2,6 +2,7 @@ import UIKit
 import XCTest
 
 @testable import CleanCodeAnimations
+import SnapshotTesting
 
 class MainViewTest: XCTestCase {
 
@@ -15,11 +16,13 @@ class MainViewTest: XCTestCase {
             backgroundColors: [fixtureInitialColor, fixtureSubsequentColor, fixtureThirdColor],
             animationsWrapper: FakeAnimationsWrapper.self
         )
+        sut.addToNewWindow()
     }
 
     func testInitialSetup() {
         XCTAssertEqual(sut.backgroundColors, [fixtureInitialColor, fixtureSubsequentColor, fixtureThirdColor], "Should use provided BG colors")
         XCTAssertEqual(sut.backgroundColor, fixtureInitialColor, "Should apply first provided color as a BG color")
+        assertSnapshot(matching: sut, as: .image(size: .init(width: 350, height: 667)), named: "MainView_state0")
     }
 
     func testFailedInitialization() {
@@ -33,18 +36,31 @@ class MainViewTest: XCTestCase {
 
         //  then:
         XCTAssertEqual(sut.backgroundColor, fixtureSubsequentColor, "Should apply second color as a BG color")
+        assertSnapshot(matching: sut, as: .image, named: "MainView_state1")
 
         //  when:
         sut.button.simulateTap()
 
         //  then:
         XCTAssertEqual(sut.backgroundColor, fixtureThirdColor, "Should apply third color as a BG color")
+        assertSnapshot(matching: sut, as: .image(size: .init(width: 350, height: 667)), named: "MainView_state2")
 
         //  when:
         sut.button.simulateTap()
 
         //  then:
         XCTAssertEqual(sut.backgroundColor, fixtureInitialColor, "Should apply first color as a BG color")
+        assertSnapshot(matching: sut, as: .image(size: .init(width: 350, height: 667)), named: "MainView_state3")
     }
 }
 
+extension UIView {
+
+    func addToNewWindow(windowFrame: CGRect? = nil) {
+        let frame = windowFrame ?? UIScreen.main.bounds
+        self.bounds = frame
+        let window = UIWindow(frame: frame)
+        window.addSubview(self)
+        window.makeKeyAndVisible()
+    }
+}
