@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E5F63C021ED192CD3CB71B4 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C6F633AC810DA8AA42A /* MainViewTests.swift */; };
 		1E5F63DD6BF2E48A432B8892 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B09422ABC521F0A9F5A /* UIImageExtensions.swift */; };
+		1E5F6431219B10C3E867A8D8 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6883BA3AC7151677B9A0 /* MainViewControllerTests.swift */; };
 		1E5F64ADFE3965933E4C1332 /* FakeUIViewAnimationsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F35AB4236F4B8F9A02D /* FakeUIViewAnimationsWrapper.swift */; };
 		1E5F65B8971CFC8A09C29D89 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F61502AFDDCBA2986D185 /* UIButtonExtensions.swift */; };
 		1E5F665851BDE3D1F0A58FD4 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F689FF2E69E67F9BC2166 /* UIColorExtensions.swift */; };
@@ -44,6 +45,7 @@
 		1E5F62742CEEB56893F03F6F /* UIControlTestsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlTestsExtensions.swift; sourceTree = "<group>"; };
 		1E5F647374922D6F4F048A71 /* UILabelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		1E5F6697BAB521F57F09C881 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1E5F6883BA3AC7151677B9A0 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		1E5F689FF2E69E67F9BC2166 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1E5F6B09422ABC521F0A9F5A /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		1E5F6C6F633AC810DA8AA42A /* MainViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				1E5F6C6F633AC810DA8AA42A /* MainViewTests.swift */,
 				2283141F2517AF0100E4D670 /* MainViewSnapshotTests.swift */,
+				1E5F6883BA3AC7151677B9A0 /* MainViewControllerTests.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				228314202517AF0100E4D670 /* MainViewSnapshotTests.swift in Sources */,
 				1E5F63C021ED192CD3CB71B4 /* MainViewTests.swift in Sources */,
 				1E5F64ADFE3965933E4C1332 /* FakeUIViewAnimationsWrapper.swift in Sources */,
+				1E5F6431219B10C3E867A8D8 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

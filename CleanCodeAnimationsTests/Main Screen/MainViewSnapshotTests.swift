@@ -14,10 +14,13 @@ class MainViewSnapshotTests: FBSnapshotTestCase {
     }
 
     func testInitialState() {
-        FBSnapshotVerifyView(sut, identifier: "MainView_state0")
+        FBSnapshotVerifyView(
+            sut, 
+            identifier: "MainView_state0"
+        )
     }
 
-    func testSubsequestStates() {
+    func testSubsequentStates() {
         //  when:
         sut.button.simulateTap()
 

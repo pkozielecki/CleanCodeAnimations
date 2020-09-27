@@ -16,13 +16,15 @@ class MainViewTest: XCTestCase {
             backgroundColors: [fixtureInitialColor, fixtureSubsequentColor, fixtureThirdColor],
             animationsWrapper: FakeAnimationsWrapper.self
         )
-        sut.addToNewWindow()
     }
 
     func testInitialSetup() {
         XCTAssertEqual(sut.backgroundColors, [fixtureInitialColor, fixtureSubsequentColor, fixtureThirdColor], "Should use provided BG colors")
         XCTAssertEqual(sut.backgroundColor, fixtureInitialColor, "Should apply first provided color as a BG color")
-        assertSnapshot(matching: sut, as: .image(size: .init(width: 350, height: 667)), named: "MainView_state0")
+        assertSnapshot(matching: sut, as: .image(
+            size: .init(width: 350, height: 667)),
+            named: "MainView_state0"
+        )
     }
 
     func testFailedInitialization() {
