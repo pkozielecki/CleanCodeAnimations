@@ -6,6 +6,7 @@
 import UIKit
 import XCTest
 import SnapshotTesting
+import Mimus
 @testable import CleanCodeAnimations
 
 final class MainViewControllerTest: XCTestCase {
@@ -44,27 +45,30 @@ final class MainViewControllerTest: XCTestCase {
         sut.mainView.changeBackgroundButton.simulateTap()
 
         //  then:
-        XCTAssertEqual(fakeDelegate.lastSetBackgroundColor, fixtureBackgroundColors[1], "Should return proper background color in delegate")
+        fakeDelegate.verifyCall(withIdentifier: "didChangeBackgroundColor", arguments: [fixtureBackgroundColors[1]])
 
         //  when - changing background color again:
         sut.mainView.changeBackgroundButton.simulateTap()
 
         //  then:
-        XCTAssertEqual(fakeDelegate.lastSetBackgroundColor, fixtureBackgroundColors[2], "Should return proper background color in delegate")
+        fakeDelegate.verifyCall(withIdentifier: "didChangeBackgroundColor", arguments: [fixtureBackgroundColors[2]])
     }
-
+    
     func testRequestingExit() {
+        //  then:
+        fakeDelegate.verifyCall(withIdentifier: "didRequestExitingCount", mode: .never)
+        
         //  when - tapping exit button:
         sut.mainView.exitButton.simulateTap()
 
         //  then:
-        XCTAssertEqual(fakeDelegate.lastSetExitRequestCount, 1, "Should return proper exit request count in delegate")
+        fakeDelegate.verifyCall(withIdentifier: "didRequestExitingCount", arguments: [1])
 
         //  when - tapping exit button again:
         sut.mainView.exitButton.simulateTap()
 
         //  then:
-        XCTAssertEqual(fakeDelegate.lastSetExitRequestCount, 2, "Should return proper exit request count in delegate")
+        fakeDelegate.verifyCall(withIdentifier: "didRequestExitingCount", arguments: [2])
     }
 
     func testRequestingHelp() {
@@ -72,12 +76,22 @@ final class MainViewControllerTest: XCTestCase {
         sut.mainView.helpButton.simulateTap()
 
         //  then:
-        XCTAssertEqual(fakeDelegate.lastSetDidRequestHelpInitially, true, "Should return initial help request in delegate")
+        fakeDelegate.verifyCall(withIdentifier: "didRequestHelpInitially", arguments: [true])
 
         //  when - tapping help button again:
         sut.mainView.helpButton.simulateTap()
 
         //  then:
-        XCTAssertEqual(fakeDelegate.lastSetDidRequestHelpInitially, false, "Should return non-initial help request in delegate")
+        fakeDelegate.verifyCall(withIdentifier: "didRequestHelpInitially", arguments: [false])
+    }
+}
+
+extension UIColor: MockEquatable {
+    
+    public func equalTo(other: Any?) -> Bool {
+        if let otherUIColor = other as? UIColor {
+            return otherUIColor == self
+        }
+        return false
     }
 }

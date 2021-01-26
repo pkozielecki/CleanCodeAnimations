@@ -1,21 +1,19 @@
 import UIKit
 @testable import CleanCodeAnimations
+import Mimus
 
-final class FakeMainViewControllerDelegate: MainViewControllerDelegate {
-
-    private(set) var lastSetBackgroundColor: UIColor?
-    private(set) var lastSetExitRequestCount: Int?
-    private(set) var lastSetDidRequestHelpInitially: Bool?
+final class FakeMainViewControllerDelegate: MainViewControllerDelegate, Mock {
+    var storage: [RecordedCall] = []
 
     func mainViewController(_ viewController: MainViewController, didChangeBackgroundColor color: UIColor) {
-        lastSetBackgroundColor = color
+        recordCall(withIdentifier: "didChangeBackgroundColor", arguments: [color])
     }
 
     func mainViewController(_ viewController: MainViewController, didRequestExitingCount count: Int) {
-        lastSetExitRequestCount = count
+        recordCall(withIdentifier: "didRequestExitingCount", arguments: [count])
     }
 
     func mainViewController(_ viewController: MainViewController, didRequestHelpInitially isInitial: Bool) {
-        lastSetDidRequestHelpInitially = isInitial
+        recordCall(withIdentifier: "didRequestHelpInitially", arguments: [isInitial])
     }
 }
