@@ -34,21 +34,21 @@ class MainViewTest: XCTestCase {
 
     func testChangingBackground() {
         //  when:
-        sut.button.simulateTap()
+        sut.changeBackgroundButton.simulateTap()
 
         //  then:
         XCTAssertEqual(sut.backgroundColor, fixtureSubsequentColor, "Should apply second color as a BG color")
         assertSnapshot(matching: sut, as: .image, named: "MainView_state1")
 
         //  when:
-        sut.button.simulateTap()
+        sut.changeBackgroundButton.simulateTap()
 
         //  then:
         XCTAssertEqual(sut.backgroundColor, fixtureThirdColor, "Should apply third color as a BG color")
         assertSnapshot(matching: sut, as: .image(size: .init(width: 350, height: 667)), named: "MainView_state2")
 
         //  when:
-        sut.button.simulateTap()
+        sut.changeBackgroundButton.simulateTap()
 
         //  then:
         XCTAssertEqual(sut.backgroundColor, fixtureInitialColor, "Should apply first color as a BG color")

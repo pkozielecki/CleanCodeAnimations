@@ -1,5 +1,11 @@
 <CleanCodeAnimations.MainView; frame = (0 0; 375 812); autoresize = W+H; layer = <CALayer>>
    | <UIButton; frame = (20 381; 335 50); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
    |    | <UIImageView; frame = (0 0; 335 50); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = <CALayer>>
-   |    | <UIButtonLabel; frame = (109 16; 117 18); text = 'Change BG color'; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
-   | <UILabel; frame = (79 100; 217.5 24); text = 'Clean Code - Animations'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    | <UIButtonLabel; frame = (109.5 16; 116 18); text = 'Change BG color'; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <UIButton; frame = (20 718; 335 50); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
+   |    | <UIImageView; frame = (0 0; 335 50); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = <CALayer>>
+   |    | <UIButtonLabel; frame = (154.5 16; 26 18); text = 'Exit'; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <UIButton; frame = (20 441; 335 50); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
+   |    | <UIImageView; frame = (0 0; 335 50); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = <CALayer>>
+   |    | <UIButtonLabel; frame = (151.5 16; 32 18); text = 'Help'; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <UILabel; frame = (78.5 100; 218.5 24); text = 'Clean Code - Animations'; userInteractionEnabled = NO; layer = <_UILabelLayer>>

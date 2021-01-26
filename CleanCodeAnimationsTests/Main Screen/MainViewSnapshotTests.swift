@@ -22,19 +22,19 @@ class MainViewSnapshotTests: FBSnapshotTestCase {
 
     func testSubsequentStates() {
         //  when:
-        sut.button.simulateTap()
+        sut.changeBackgroundButton.simulateTap()
 
         //  then:
         FBSnapshotVerifyView(sut, identifier: "MainView_state1")
 
         //  when:
-        sut.button.simulateTap()
+        sut.changeBackgroundButton.simulateTap()
 
         //  then:
         FBSnapshotVerifyView(sut, identifier: "MainView_state2")
 
         //  when:
-        sut.button.simulateTap()
+        sut.changeBackgroundButton.simulateTap()
 
         //  then:
         FBSnapshotVerifyView(sut, identifier: "MainView_state0")

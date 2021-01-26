@@ -8,6 +8,6 @@
 
 # ----- Unit Tests ------
 
-# iOSSnapshotTestcase
 github "uber/ios-snapshot-test-case" ~> 6.1.0
 github "pointfreeco/swift-snapshot-testing" ~> 1.8.2
+github "Airhelp/Mimus" == 1.1.4
